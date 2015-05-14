@@ -7,10 +7,8 @@ Gem::Specification.new do |spec|
   spec.name          = "cocoapods-thumbs"
   spec.version       = CocoapodsThumbs::VERSION
   spec.authors       = ["Pablo Bendersky"]
-  spec.email         = ["pbendersky@quadiontech.com"]
-  spec.description   = %q{A short description of cocoapods-thumbs.}
-  spec.summary       = %q{A longer description of cocoapods-thumbs.}
-  spec.homepage      = "https://github.com/EXAMPLE/cocoapods-thumbs"
+  spec.summary       = %q{CocoaPods plugin which allows to see peer votes of a Podfile or single Podspec.}
+  spec.homepage      = "https://github.com/quadion/cocoapods-thumbs"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

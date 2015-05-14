@@ -1,0 +1,37 @@
+{
+    "thumbs": [
+        {
+            "name": "AFNetworking",
+            "version": "~> 2.5",
+            "votes": [
+                {
+                    "type": "up",
+                    "voter": "@pbendersky",
+                    "comment": "Excellent library!"
+                }
+            ]
+        },
+        {
+            "name": "AFNetworking",
+            "version": "2.5.2",
+            "votes": [
+                {
+                    "type": "down",
+                    "voter": "@pbendersky",
+                    "comment": "Don't use this version, update to 2.5.3 instead."
+                }
+            ]
+        },
+        {
+            "name": "EGOTableViewPullRefresh",
+            "version": "~> 0.1",
+            "votes": [
+                {
+                    "type": "down",
+                    "voter": "@pbendersky",
+                    "comment": "Discontinued. Use native implementation in UITableView"
+                }
+            ]
+        }
+    ]
+}
