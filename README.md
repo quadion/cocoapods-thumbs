@@ -1,6 +1,6 @@
 # Cocoapods thumbs
 
-cocoapods-thumbs is a simple implementation of a graylist for Podspecs.
+cocoapods-thumbs is a simple implementation of a graylist (whitelist + blacklist) for Podspecs.
 
 When run, cocoapods will check either the full Podfile or a single Podspec against votes stored in a server
 and report them back to the user.
