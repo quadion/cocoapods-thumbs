@@ -24,6 +24,10 @@ While more elaborate servers providing means for users to vote with a UI can be 
 Set the server URL by calling:
 
     $ pod thumbs server URL
+
+example:
+
+    $ pod thumbs server https://raw.githubusercontent.com/quadion/thumbs/master/list.json
     
 ### Checking a full Podfile
 
@@ -42,3 +46,9 @@ Where `REQUIREMENT` is a version requirement with the same supported syntax as i
 By default, this will use a platform os iOS 8.3. If you want to override the platform and version you can add:
 
     $ pod thumbs NAME REQUIREMENT --platform=osx --version=10.10
+
+Examples:
+
+    $ pod thumbs AFNetworking
+    $ pod thumbs AFNetworking '~> 2.5'
+    $ pod thumbs AFNetworking --platform=ios --version=8.3
