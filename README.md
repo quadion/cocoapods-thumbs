@@ -1,5 +1,9 @@
 # Cocoapods thumbs
 
+[![Build Status](http://img.shields.io/travis/quadion/cocoapods-thumbs/master.svg?style=flat)](https://travis-ci.org/quadion/cocoapods-thumbs)
+[![Coverage](https://img.shields.io/codeclimate/coverage/github/quadion/cocoapods-thumbs.svg?style=flat)](https://codeclimate.com/github/quadion/cocoapods-thumbs)
+[![Code Climate](https://img.shields.io/codeclimate/github/quadion/cocoapods-thumbs.svg?style=flat)](https://codeclimate.com/github/quadion/cocoapods-thumbs)
+
 cocoapods-thumbs is a simple implementation of a graylist (whitelist + blacklist) for Podspecs.
 
 When run, cocoapods will check either the full Podfile or a single Podspec against votes stored in a server

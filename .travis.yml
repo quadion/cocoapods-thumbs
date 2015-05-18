@@ -3,6 +3,10 @@
 #
 language: objective-c
 
+addons:
+  code_climate:
+    repo_token: ac16a75350b3a1f800cda5b913dabe4157fe5fce82bde75c62c9c5fb4dd8df27
+
 env:
   - RVM_RUBY_VERSION=system
 
@@ -19,5 +23,5 @@ install:
   - sudo bundle install --without=documentation
 
 script:
-  - bundle exec pod setup 
+  - bundle exec pod setup --silent
   - bundle exec rake specs
