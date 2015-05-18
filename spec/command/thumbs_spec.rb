@@ -49,7 +49,7 @@ module Pod
       end
 
       it 'can optionally receive a spec name and a requirements string' do
-        command = Command.parse(%w{ thumbs AFNetworking 2.5.2 })
+        command = Command.parse(%w{ thumbs AFNetworking 2.5 })
         lambda { command.run }.should.not.raise CLAide::Help
       end
 
