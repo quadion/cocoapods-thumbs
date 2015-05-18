@@ -18,4 +18,6 @@ before_install:
 install:
   - sudo bundle install --without=documentation
 
-script: bundle exec rake specs
+script:
+  - bundle exec pod setup 
+  - bundle exec rake specs
