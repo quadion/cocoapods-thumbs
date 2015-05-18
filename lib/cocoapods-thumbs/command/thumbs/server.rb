@@ -17,9 +17,7 @@ module Pod
         end
 
         def run
-          config = { url: @url }
-          
-          File.open(CONFIG_FILE_PATH, 'w') { |f| f.write config.to_yaml }
+          Pod::Thumbs::Configuration.set_url(@url)
           
           UI.title("Server configured") do
             UI.labeled 'URL', @url

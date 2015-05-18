@@ -5,6 +5,7 @@ require 'cocoapods-thumbs/voted_dependency'
 require 'cocoapods-thumbs/votes_list'
 require 'cocoapods-thumbs/dependency_vote'
 require 'cocoapods-thumbs/user_interface'
+require 'cocoapods-thumbs/configuration'
 
 module Pod
   class Command
@@ -20,8 +21,6 @@ module Pod
         CLAide::Argument.new('NAME',           false),
         CLAide::Argument.new('REQUIREMENT',    false),
       ]
-
-      CONFIG_FILE_PATH = File.expand_path('~/.cocoapods-thumbs.yaml')
       
       # @return [Pathname]
       #
@@ -61,7 +60,7 @@ module Pod
       end
 
       def run
-        @configuration = YAML.load_file(CONFIG_FILE_PATH)
+        @configuration = Pod::Thumbs::Configuration.load
         @rest = Rest::Client.new
         @votes_list = Pod::Thumbs::VotesList.new(@rest.get(@configuration[:url]).body)
         
@@ -116,9 +115,7 @@ module Pod
       end
       
       def verify_config_exists!
-        begin
-          YAML::load(IO.read(CONFIG_FILE_PATH))
-        rescue
+        unless Pod::Thumbs::Configuration.exists?
           raise Informative, "No cocoapods-thumb configuration file found on your home directory. Run `pod thumbs server'."
         end
       end

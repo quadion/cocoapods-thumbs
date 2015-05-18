@@ -1,11 +1,16 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
 module Pod
+  
+  require 'cocoapods-thumbs/configuration'
+  
   describe Command::Thumbs do
     
     before do
       Pod::Config.any_instance.stubs(:podfile).returns(Pod::Podfile.new(Pathname.new(ROOT + '/specs/fixtures/Podfile')))
       Pod::Config.any_instance.stubs(:integrate_targets?).returns(false)
+      Pod::Thumbs::Configuration.stubs(:config_file_path).returns(File.new(ROOT + 'spec/fixtures/.cocoapods-thumbs.yaml'))
+      Pod::Command::Thumbs.any_instance.stubs(:verify_config_exists!).returns(true)
     end
     
     describe 'CLAide' do
