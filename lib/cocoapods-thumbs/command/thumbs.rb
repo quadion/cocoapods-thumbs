@@ -1,5 +1,5 @@
 require 'yaml'
-require 'rest'
+require 'rest-client'
 
 require 'cocoapods-thumbs/voted_dependency'
 require 'cocoapods-thumbs/votes_list'
@@ -61,8 +61,7 @@ module Pod
 
       def run
         @configuration = Pod::Thumbs::Configuration.load
-        @rest = Rest::Client.new
-        @votes_list = Pod::Thumbs::VotesList.new(@rest.get(@configuration[:url]).body)
+        @votes_list = Pod::Thumbs::VotesList.new(RestClient.get(@configuration[:url]).body)
         
         configure_sandbox_and_podfile
         

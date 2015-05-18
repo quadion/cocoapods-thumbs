@@ -14,7 +14,7 @@ module Pod
       end
       
       it "should set the new URL for the server and print it back to the user" do
-        test_server = "https://github.com/pbendersky/thumbs/raw/master/list.json"
+        test_server = "https://github.com/quadion/thumbs/raw/master/list.json"
         command = Command.parse(%W( thumbs server #{test_server} ))
         lambda { command.validate! }.should.not.raise CLAide::Help
         command.run

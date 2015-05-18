@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'json', '1.7.7'
-gem 'rest'
+gem 'rest-client'
 
 group :development do
   gem 'cocoapods'
