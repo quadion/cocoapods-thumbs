@@ -37,7 +37,7 @@ To check a single Podspec run:
 
     $ pod thumbs NAME REQUIREMENT
     
-Where VERSION is a version requirement with the same supported syntax as in a Podfile.
+Where `REQUIREMENT` is a version requirement with the same supported syntax as in a Podfile.
 
 By default, this will use a platform os iOS 8.3. If you want to override the platform and version you can add:
 
