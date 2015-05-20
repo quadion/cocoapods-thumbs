@@ -1,6 +1,7 @@
 # CocoaPods thumbs
 
 [![Build Status](http://img.shields.io/travis/quadion/cocoapods-thumbs/master.svg?style=flat)](https://travis-ci.org/quadion/cocoapods-thumbs)
+[![Gem Version](http://img.shields.io/gem/v/cocoapods-thumbs.svg?style=flat)](http://badge.fury.io/rb/cocoapods-thumbs)
 [![Coverage](https://img.shields.io/codeclimate/coverage/github/quadion/cocoapods-thumbs.svg?style=flat)](https://codeclimate.com/github/quadion/cocoapods-thumbs)
 [![Code Climate](https://img.shields.io/codeclimate/github/quadion/cocoapods-thumbs.svg?style=flat)](https://codeclimate.com/github/quadion/cocoapods-thumbs)
 
